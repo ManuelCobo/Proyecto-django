@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}
+        
+        {% endblock %} - ADSO SENA
+    </title>
+    <link rel="stylesheet"  href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <!-- cabecera de la pagina -->
+    <header>
+        <div id="logotipo">
+            <!-- logo django-->
+             <img src="{% static 'images/logo-django.png' %}">
+            <h1>sitio web con Django</h1>
+        </div>
+        
+    </header>
+    
+    <nav>
+                <ul>
+            <li>
+            <a href="{% url 'inicio' %}">Inicio</a> 
+        </li> 
+        <li>
+            <a href="{% url 'hola-mundo' %}">Hola mundo</a> 
+        </li> 
+        <li>
+            <a href="{% url 'pagina' %}">Pagina de pruebas</a> 
+        </li> 
+        <li>
+            <a href="{% url 'contacto' %}">Contacto</a> 
+        </li> 
+    </ul>   
+    </nav>
+                
+
+    <div id="content">
+        <div class="box">
+            <h1 class="title">Titulo de prueba</h1>
+            {% block content %}
+                <!-- codigo que viene de templates -->
+                <strong>Contenido del bloque original</strong>
+            {% endblock %}
+        </div>
+    </div>
+    <hr/>
+    <footer>
+        curso de python &copy; ADSO SENA - {% now "d/m/y" %}
+    </footer>
+</body>
+</html>
