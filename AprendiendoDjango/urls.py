@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings 
 
 # Importar app con mis vistas
 from miapp import views
@@ -40,3 +41,9 @@ urlpatterns = [
     path('create-article/', views.create_article, name="create"),
     path('create-full-article/', views.create_full_article, name="create_full"),
 ]
+# Configurar para cargar imagenes
+if settings.DEBUG:
+    #Podemos tener accesible la función static que permite cargar de una url a un fichero estatico
+    #que pueda leer el framework
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
