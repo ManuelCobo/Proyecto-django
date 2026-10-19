@@ -86,6 +86,7 @@ nav ul li a:hover{
     margin-bottom: 30px;
     margin-top: 40px;
 }
+
 .box{
     background: white;
     min-height: 930px;
@@ -114,4 +115,67 @@ footer{
     margin: 0 auto;
     padding-bottom: 20px;
     box-shadow: 0px 0px 20px gray;
+}
+
+.box{
+    background: white;
+    min-height: 930px;
+    width: 95%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    margin: 0 auto;
+}
+
+/*Estilos para formulario*/
+.box form{
+    width: 40%; /*ancho del formulario*/
+}
+
+/*los controles ocupan una linea*/
+.box form input,
+.box form label{
+    display: block;
+    padding: 5px;
+    padding-left: 0px;
+}
+
+/*ancho de los controles*/
+.box form input[type="text"],
+.box form textarea,
+.box form select{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*select*/
+.box form select{
+    width: 70px;
+    padding: 5px;
+}
+
+/*Boton*/
+.box form input[type="submit"],
+.box form input[type="buttom"],
+.box form button{
+    padding: 10px;
+    margin-top: 5px;
+    background: #2ba977;
+    border: 1px solid #444;
+    color: white;
+    transition: 300ms all;
+    border-radius: 7px;
+}
+
+/* Color del boton cuando pase por encima */
+.box form input[type="submit"]:hover,
+.box form input[type="buttom"]:hover,
+.box form button:hover{
+    cursor: pointer;
+    background: #1f7e58;
+}
+/* estilos para clase rojo de validadcion */
+.rojo{
+    color: red;
+    box-shadow: 0px 0px 4px black;
 }

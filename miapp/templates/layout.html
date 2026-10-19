@@ -23,10 +23,19 @@
     </header>
     
     <nav>
-                <ul>
-            <li>
+    <ul>
+        <li>
             <a href="{% url 'inicio' %}">Inicio</a> 
         </li> 
+        <li>
+            <a href="{% url 'articulos' %}">Articulos</a> 
+        </li> 
+        <li>
+            <a href="{% url 'create' %}">Crear Articulo</a>
+        </li>
+        <li>
+            <a href="{% url 'create_full' %}">Crear Articulo clases</a>
+        </li>
         <li>
             <a href="{% url 'hola-mundo' %}">Hola mundo</a> 
         </li> 
@@ -42,7 +51,6 @@
 
     <div id="content">
         <div class="box">
-            <h1 class="title">Titulo de prueba</h1>
             {% block content %}
                 <!-- codigo que viene de templates -->
                 <strong>Contenido del bloque original</strong>
